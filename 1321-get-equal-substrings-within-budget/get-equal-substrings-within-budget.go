@@ -1,7 +1,4 @@
-import (
-  "fmt"
-    "strings"
-)
+package main
 
 func abs(n int) int {
 	if n > 0 {
