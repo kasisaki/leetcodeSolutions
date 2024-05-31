@@ -4,7 +4,8 @@ func twoSum(nums []int, target int) []int {
 		m[n] = append(m[n], i)
 	}
 	for k, v := range m {
-		if target == 2*k && len(v) > 1 { //in case if we have two repeating ints that sum up to target
+        l := len(v)
+		if target == 2*k && l > 1 { //in case if we have two repeating ints that sum up to target
 			return []int{v[0], v[1]}
 		}
 		if val, ok := m[target-k]; ok && target != 2*k { // so that we don't return the non-repeating value where k + k == target
