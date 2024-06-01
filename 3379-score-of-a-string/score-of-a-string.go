@@ -1,4 +1,4 @@
-func abs(n int) int {
+func abs(n rune) rune {
 	if n > 0 {
 		return n
 	}
@@ -6,10 +6,10 @@ func abs(n int) int {
 }
 
 func scoreOfString(s string) int {
-	sum := 0
+	var sum rune
 
 	for i := 0; i < len(s)-1; i++ {
-		sum += int(math.Abs(float64(rune(s[i]) - rune(s[i+1]))))
+		sum += abs(rune(s[i]) - rune(s[i+1]))
 	}
-	return sum
+	return int(sum)
 }
