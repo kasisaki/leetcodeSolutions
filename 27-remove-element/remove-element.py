@@ -5,15 +5,10 @@ class Solution(object):
         :type val: int
         :rtype: int
         """
-        count = 0
-
-        for v in nums[:]:
-            if v == val:
-                nums.remove(v)
-                continue
-            count += 1
+        while val in nums[:]:
+            nums.remove(val)
     
-        return count
+        return len(nums)
 
         
             
