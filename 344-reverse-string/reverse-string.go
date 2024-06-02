@@ -9,5 +9,4 @@ func reverseString(s []byte) {
 		s[i] = b
 		s[j-i] = a
 	}
-
 }
