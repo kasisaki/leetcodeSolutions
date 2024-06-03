@@ -4,7 +4,8 @@ func findFromIndex(s string, start int, end int, r rune) (bool, int) {
 			return true, i + 1
 		}
 	}
-	return false, -1
+
+	return false, 0
 }
 
 func appendCharacters(s string, t string) int {
