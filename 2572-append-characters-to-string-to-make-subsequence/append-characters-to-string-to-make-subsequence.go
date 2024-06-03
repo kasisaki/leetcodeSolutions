@@ -18,7 +18,7 @@ func appendCharacters(s string, t string) int {
 			charsLeft--
 			continue
 		}
-		return charsLeft
+		break
 	}
 	return charsLeft
 }
