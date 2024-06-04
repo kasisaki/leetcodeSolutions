@@ -17,5 +17,6 @@ func longestPalindrome(s string) int {
 	if singleLetterPresent {
 		return doubles*2 + 1
 	}
+    
 	return doubles * 2
 }
