@@ -3,15 +3,13 @@ package main
 import "fmt"
 
 func removeDuplicates(nums []int) int {
-	l := len(nums)
-	count := 1
-	beginning := true
+	count := 0
 	prev := 0
 	moves := 0
 
 	for i, n := range nums {
-		if beginning {
-			beginning = false
+		if count == 0 {
+            count = 1
 			prev = n
 			continue
 		}
@@ -42,5 +40,5 @@ func removeDuplicates(nums []int) int {
 		badIndex++
 	}
 
-	return l - moves
+	return len(nums) - moves
 }
